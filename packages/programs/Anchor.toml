@@ -6,13 +6,13 @@ resolution = true
 skip-lint = false
 
 [programs.localnet]
-nanoremit_vault = "Ac1j2omF6m4VeAGQ1eVEBZ9MXimc1UTnoUHoYe6ymHD4"
+nanoremit_vault = "4rmSRCR7TesHWjQZkHwQa8XwQoh6kBJe9r2DF2mz5z9D"
 
 [programs.devnet]
-nanoremit_vault = "Ac1j2omF6m4VeAGQ1eVEBZ9MXimc1UTnoUHoYe6ymHD4"
+nanoremit_vault = "4rmSRCR7TesHWjQZkHwQa8XwQoh6kBJe9r2DF2mz5z9D"
 
 [programs.testnet]
-nanoremit_vault = "Ac1j2omF6m4VeAGQ1eVEBZ9MXimc1UTnoUHoYe6ymHD4"
+nanoremit_vault = "4rmSRCR7TesHWjQZkHwQa8XwQoh6kBJe9r2DF2mz5z9D"
 
 [registry]
 url = "https://api.apr.dev"

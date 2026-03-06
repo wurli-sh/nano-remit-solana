@@ -11,7 +11,7 @@
 | Resource | Address |
 |----------|---------|
 | **Live App** | [https://nano-remit-solana.vercel.app](https://nano-remit-solana.vercel.app) |
-| **Program** | [`Ac1j2omF6m4VeAGQ1eVEBZ9MXimic1UTnoUHoYe6ymHD4`](https://explorer.solana.com/address/Ac1j2omF6m4VeAGQ1eVEBZ9MXimic1UTnoUHoYe6ymHD4?cluster=devnet) |
+| **Program** | [`4rmSRCR7TesHWjQZkHwQa8XwQoh6kBJe9r2DF2mz5z9D`](https://explorer.solana.com/address/4rmSRCR7TesHWjQZkHwQa8XwQoh6kBJe9r2DF2mz5z9D?cluster=devnet) |
 | **RPC** | `https://api.devnet.solana.com` |
 | **Cluster** | `devnet` |
 
@@ -133,14 +133,14 @@ pnpm dev
 ```bash
 VITE_SOLANA_CLUSTER=devnet
 VITE_SOLANA_RPC_URL=https://api.devnet.solana.com
-VITE_PROGRAM_ID=Ac1j2omF6m4VeAGQ1eVEBZ9MXimic1UTnoUHoYe6ymHD4
+VITE_PROGRAM_ID=4rmSRCR7TesHWjQZkHwQa8XwQoh6kBJe9r2DF2mz5z9D
 VITE_API_URL=http://localhost:3001                  # Optional
 ```
 
 **Anchor** (`Anchor.toml` in `packages/programs`):
 ```toml
 [programs.devnet]
-nanoremit_vault = "Ac1j2omF6m4VeAGQ1eVEBZ9MXimc1UTnoUHoYe6ymHD4"
+nanoremit_vault = "4rmSRCR7TesHWjQZkHwQa8XwQoh6kBJe9r2DF2mz5z9D"
 
 [provider]
 cluster = "devnet"

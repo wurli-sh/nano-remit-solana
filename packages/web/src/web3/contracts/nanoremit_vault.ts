@@ -5,7 +5,7 @@
  * IDL can be found at `target/idl/nanoremit_vault.json`.
  */
 export type NanoremitVault = {
-  "address": "Ac1j2omF6m4VeAGQ1eVEBZ9MXimc1UTnoUHoYe6ymHD4",
+  "address": "4rmSRCR7TesHWjQZkHwQa8XwQoh6kBJe9r2DF2mz5z9D",
   "metadata": {
     "name": "nanoremitVault",
     "version": "0.1.0",

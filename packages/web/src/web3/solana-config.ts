@@ -3,7 +3,7 @@ import { AnchorProvider, Program, type Wallet } from '@coral-xyz/anchor'
 import type { NanoremitVault } from './contracts/nanoremit_vault'
 import IDL from './contracts/nanoremit_vault.json'
 
-export const PROGRAM_ID = 'Ac1j2omF6m4VeAGQ1eVEBZ9MXimc1UTnoUHoYe6ymHD4'
+export const PROGRAM_ID = '4rmSRCR7TesHWjQZkHwQa8XwQoh6kBJe9r2DF2mz5z9D'
 
 // Get cluster from env (devnet for hackathon)
 const cluster = (import.meta.env.VITE_SOLANA_CLUSTER || 'devnet') as 'devnet' | 'mainnet-beta' | 'testnet'

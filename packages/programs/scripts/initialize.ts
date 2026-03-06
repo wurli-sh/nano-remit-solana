@@ -12,7 +12,7 @@ import { resolve } from 'path'
 // Load IDL
 const IDL = JSON.parse(readFileSync(resolve(__dirname, '../target/idl/nanoremit_vault.json'), 'utf-8'))
 
-const PROGRAM_ID = new PublicKey('Ac1j2omF6m4VeAGQ1eVEBZ9MXimc1UTnoUHoYe6ymHD4')
+const PROGRAM_ID = new PublicKey('4rmSRCR7TesHWjQZkHwQa8XwQoh6kBJe9r2DF2mz5z9D')
 
 async function main() {
   // Load deploy keypair

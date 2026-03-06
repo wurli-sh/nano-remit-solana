@@ -24,7 +24,7 @@ use repay::*;
 use set_tier::*;
 use withdraw_receipt::*;
 
-declare_id!("Ac1j2omF6m4VeAGQ1eVEBZ9MXimc1UTnoUHoYe6ymHD4");
+declare_id!("4rmSRCR7TesHWjQZkHwQa8XwQoh6kBJe9r2DF2mz5z9D");
 
 #[program]
 pub mod nanoremit_vault {
