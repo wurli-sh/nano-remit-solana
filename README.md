@@ -1,5 +1,3 @@
-# NanoRemit Vault
-
 <div align="center">
   <img src="./nano-remit.png" width="100%" alt="solana" />
 </div>
@@ -11,6 +9,7 @@
 | Resource | Address |
 |----------|---------|
 | **Live App** | [https://nano-remit-solana.vercel.app](https://nano-remit-solana.vercel.app) |
+| **Live Demo** | [https://youtu.be/G_tleWsgKH8](https://youtu.be/G_tleWsgKH8) |
 | **Program** | [`4rmSRCR7TesHWjQZkHwQa8XwQoh6kBJe9r2DF2mz5z9D`](https://explorer.solana.com/address/4rmSRCR7TesHWjQZkHwQa8XwQoh6kBJe9r2DF2mz5z9D?cluster=devnet) |
 | **RPC** | `https://api.devnet.solana.com` |
 | **Cluster** | `devnet` |
