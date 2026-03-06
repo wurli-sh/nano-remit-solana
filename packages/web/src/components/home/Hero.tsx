@@ -68,7 +68,7 @@ export function Hero() {
             </motion.div>
           </Link>
           <motion.a
-            href="https://github.com/probin-sir/nano-remit-solana"
+            href="https://github.com/wurli-sh/nano-remit-solana"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex h-12 items-center gap-2 rounded-full border border-border bg-background px-6 text-base font-medium text-foreground transition-colors hover:bg-muted"
