@@ -2,6 +2,8 @@
 
 > Turn remittances into real borrowing power on Solana.
 
+Every month, millions send money home—to parents in Nepal, to families building futures across borders. But those remittances just sit there, losing value while waiting. **NanoRemit turns idle remittances into active capital.** Deposit what you've sent. Borrow against it. Build on-chain credit history. From remittances to financial freedom, powered by Solana.
+
 ---
 
 ## Architecture

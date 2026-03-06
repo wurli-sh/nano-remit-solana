@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@300;400;500;600;700;800&display=swap');
+@import 'tailwindcss';
+
+@theme {
+  /* Primary Brand Colors */
+  --color-primary: #163300;
+  --color-primary-foreground: #9FE870;
+  --color-primary-bright: #9FE870;
+  --color-primary-dark: #163300;
+
+  /* Neutrals */
+  --color-charcoal: #1A1A1A;
+  --color-charcoal-soft: #2C2C2C;
+  --color-ghost: #F5F5F5;
+  --color-ghost-dim: #EBEBEB;
+  --color-black: #000000;
+  --color-white: #FFFFFF;
+
+  /* Semantic tokens */
+  --color-background: #FFFFFF;
+  --color-foreground: #0F0F0F;
+  --color-card: #F7F7F7;
+  --color-card-foreground: #0F0F0F;
+  --color-border: #E2E2E2;
+  --color-muted: #F0F0F0;
+  --color-muted-foreground: #5A5A5A;
+  --color-secondary: #9FE870;
+  --color-secondary-foreground: #163300;
+  --color-accent: #9FE870;
+  --color-accent-foreground: #163300;
+  --color-destructive: #ef4444;
+  --color-destructive-foreground: #ffffff;
+  --color-warning: #f59e0b;
+  --color-warning-foreground: #000000;
+  --color-ring: #163300;
+  --radius: 0.75rem;
+
+  --font-sans: 'Onest', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  *,
+  *::before,
+  *::after {
+    border-color: var(--color-border);
+  }
+
+  /* Hide scrollbar but allow scrolling */
+  *::-webkit-scrollbar {
+    display: none;
+  }
+
+  * {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* Custom Sonner Toast Styles */
+  .sonner-toast {
+    border-radius: 0.75rem !important;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06) !important;
+  }
+
+  [data-sonner-toast][data-type='success'] {
+    --normal-bg: #9FE870 !important;
+    --normal-border: #163300 !important;
+    --normal-text: #163300 !important;
+  }
+
+  [data-sonner-toast][data-type='error'] {
+    --normal-bg: #fef2f2 !important;
+    --normal-border: #ef4444 !important;
+    --normal-text: #ef4444 !important;
+  }
+
+  [data-sonner-toast][data-type='info'] {
+    --normal-bg: var(--color-card) !important;
+    --normal-border: var(--color-primary) !important;
+    --normal-text: var(--color-foreground) !important;
+  }
+
+  [data-sonner-toaster] {
+    font-family: var(--font-sans) !important;
+  }
+
+  /* Skeleton shimmer animation */
+  @keyframes shimmer {
+    0% {
+      background-position: 200% 0;
+    }
+    100% {
+      background-position: -200% 0;
+    }
+  }
+}
