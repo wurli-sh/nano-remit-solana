@@ -8,6 +8,7 @@ import { useState, useRef, useEffect } from 'react'
 import { NanoVaultLogo } from '@/assets'
 import { cn } from '@/utils/cn'
 import { truncateAddress } from '@/utils/format'
+import { useWalletReady } from '@/web3/hooks'
 
 const navLinks = [
   { to: '/', label: 'Home' },
@@ -74,6 +75,7 @@ export function Header() {
 function WalletButton() {
   const { publicKey, connected, connecting, disconnect, wallet } = useWallet()
   const { setVisible } = useWalletModal()
+  const walletReady = useWalletReady()
   const [menuOpen, setMenuOpen] = useState(false)
   const menuRef = useRef<HTMLDivElement>(null)
 
@@ -87,6 +89,13 @@ function WalletButton() {
     if (menuOpen) document.addEventListener('mousedown', handleClick)
     return () => document.removeEventListener('mousedown', handleClick)
   }, [menuOpen])
+
+  // Show skeleton pill while autoConnect is settling
+  if (!walletReady) {
+    return (
+      <div className="h-9 w-36 animate-pulse rounded-full bg-white/10" />
+    )
+  }
 
   if (!connected || !publicKey) {
     return (
