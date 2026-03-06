@@ -1,8 +1,19 @@
 # NanoRemit Vault
 
-> Turn remittances into real borrowing power on Solana.
+<div align="center">
+  <img src="./nano-remit.png" width="100%" alt="solana" />
+</div>
 
-Every month, millions send money home—to parents in Nepal, to families building futures across borders. But those remittances just sit there, losing value while waiting. **NanoRemit turns idle remittances into active capital.** Deposit what you've sent. Borrow against it. Build on-chain credit history. From remittances to financial freedom, powered by Solana.
+**Turn idle remittances into active capital.** Deposit, borrow, and build on-chain credit history—powered by Solana.
+
+## Deployed on Devnet
+
+| Resource | Address |
+|----------|---------|
+| **Live App** | [https://nano-remit-solana.vercel.app](https://nano-remit-solana.vercel.app) |
+| **Program** | [`Ac1j2omF6m4VeAGQ1eVEBZ9MXimic1UTnoUHoYe6ymHD4`](https://explorer.solana.com/address/Ac1j2omF6m4VeAGQ1eVEBZ9MXimic1UTnoUHoYe6ymHD4?cluster=devnet) |
+| **RPC** | `https://api.devnet.solana.com` |
+| **Cluster** | `devnet` |
 
 ---
 
@@ -120,12 +131,10 @@ pnpm dev
 
 **Frontend** (`.env` in `packages/web`):
 ```bash
-VITE_CHAIN_ID=31337                                 # Localnet / Devnet
-VITE_NANO_USD=<NanoUSD mint address>                # Deployed NanoUSD mint
-VITE_RECEIPT=<Receipt mint address>                 # Deployed Receipt mint
-VITE_VAULT=<Vault program address>                  # Deployed NanoRemitVault
-VITE_WC_PROJECT_ID=your_wc_project_id               # WalletConnect
-VITE_API_URL=http://localhost:3001                  # Backend API (optional)
+VITE_SOLANA_CLUSTER=devnet
+VITE_SOLANA_RPC_URL=https://api.devnet.solana.com
+VITE_PROGRAM_ID=Ac1j2omF6m4VeAGQ1eVEBZ9MXimic1UTnoUHoYe6ymHD4
+VITE_API_URL=http://localhost:3001                  # Optional
 ```
 
 **Anchor** (`Anchor.toml` in `packages/programs`):
@@ -135,7 +144,7 @@ nanoremit_vault = "Ac1j2omF6m4VeAGQ1eVEBZ9MXimc1UTnoUHoYe6ymHD4"
 
 [provider]
 cluster = "devnet"
-wallet = "~/.config/solana/nanoremit-deploy.json"
+wallet = "~/.config/solana/id.json"
 ```
 
 ---
