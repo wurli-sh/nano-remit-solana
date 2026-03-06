@@ -1,0 +1,19 @@
+# IDE / OS
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*.swp
+*.swo
+*~
+
+# Testing
+coverage/
+.nyc_output/
+
+# Temporary
+.tmp/
+temp/
+
+# Instructions (local only)
+/.github
