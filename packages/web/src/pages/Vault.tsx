@@ -6,13 +6,15 @@ import { Vault as VaultIcon } from 'lucide-react'
 import { Toggle} from '@/components/common/Toggle'
 import { VaultSkeleton } from '@/components/common/Skeleton'
 import { DepositTab, BorrowTab, RepayTab, WithdrawTab } from '@/components/vault/index'
+import { useWalletReady } from '@/web3/hooks'
 
 type Tab = 'deposit' | 'borrow' | 'repay' | 'withdraw'
 
 const VALID_TABS: Tab[] = ['deposit', 'borrow', 'repay', 'withdraw']
 
 export default function VaultPage() {
-  const { connected, connecting } = useWallet()
+  const { connected } = useWallet()
+  const walletReady = useWalletReady()
   const [searchParams] = useSearchParams()
   const tabParam = searchParams.get('tab') as Tab | null
   const initialTab = tabParam && VALID_TABS.includes(tabParam) ? tabParam : 'deposit'
@@ -24,8 +26,8 @@ export default function VaultPage() {
     }
   }, [tabParam])
 
-  // Show skeleton while checking wallet connection
-  if (connecting) {
+  // Show skeleton while wallet adapter is settling (autoConnect)
+  if (!walletReady) {
     return <VaultSkeleton />
   }
 

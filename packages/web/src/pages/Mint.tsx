@@ -8,7 +8,7 @@ import { NanoVaultLogo } from '@/assets'
 import { Input } from '@/components/ui'
 import { Toggle } from '@/components/common/Toggle'
 import { MintSkeleton } from '@/components/common/Skeleton'
-import { useMintNft } from '@/web3/hooks'
+import { useMintNft, useWalletReady } from '@/web3/hooks'
 import { getExplorerTxUrl } from '@/web3/constants'
 import { pinToIPFS } from '@/utils/api'
 import { truncateAddress } from '@/utils/format'
@@ -26,7 +26,8 @@ const POPULAR_CURRENCIES = [
 const ALL_CURRENCIES = cc.codes()
 
 export default function Mint() {
-  const { publicKey, connected, connecting } = useWallet()
+  const { publicKey, connected } = useWallet()
+  const walletReady = useWalletReady()
 
   const [mode, setMode] = useState<'demo' | 'upload'>('demo')
   const [file, setFile] = useState<File | null>(null)
@@ -107,7 +108,7 @@ export default function Mint() {
     mintNft.mint(uploadedUri, 'Remittance Receipt')
   }
 
-  if (connecting) {
+  if (!walletReady) {
     return <MintSkeleton />
   }
 

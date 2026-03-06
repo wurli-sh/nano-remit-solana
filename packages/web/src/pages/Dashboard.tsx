@@ -3,7 +3,7 @@ import { CreditCard, ArrowDownLeft, ArrowUpRight, FileText, ArrowUpDown, Shield 
 import { Link } from 'react-router-dom'
 
 import { NanoVaultLogo } from '@/assets'
-import { useVaultData, useDepositedNfts } from '@/web3/hooks'
+import { useVaultData, useDepositedNfts, useWalletReady } from '@/web3/hooks'
 import { formatToken } from '@/utils/format'
 import { cn } from '@/utils/cn'
 import { DashboardSkeleton } from '@/components/common/Skeleton'
@@ -42,11 +42,12 @@ function tierDisplay(tier: number) {
 }
 
 export default function Dashboard() {
-  const { connected, connecting } = useWallet()
+  const { connected } = useWallet()
+  const walletReady = useWalletReady()
   const { data: vault, isLoading, isError } = useVaultData()
   const { data: depositedNfts = [] } = useDepositedNfts()
 
-  if (connecting) {
+  if (!walletReady) {
     return <DashboardSkeleton />
   }
 
